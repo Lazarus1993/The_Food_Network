@@ -9,7 +9,7 @@ const Review = require("../../models/Review");
 const Profile = require("../../models/Profile");
 
 // Validation
-const validateReviewtInput = require("../../validations/review");
+const validateReviewInput = require("../../validations/review");
 
 // @route   GET api/reviews/test
 // @desc    Tests review route
@@ -44,7 +44,7 @@ router.post(
   "/",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    const { errors, isValid } = validatePostInput(req.body);
+    const { errors, isValid } = validateReviewInput(req.body);
 
     // Check Validation
     if (!isValid) {
@@ -53,6 +53,7 @@ router.post(
     }
 
     const newReview = new Review({
+      stars: req.body.stars,
       text: req.body.text,
       name: req.body.name,
       avatar: req.body.avatar,
