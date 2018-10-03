@@ -21,6 +21,8 @@ import EditProfile from "./components/edit-profile/EditProfile";
 import Profiles from "./components/profiles/Profiles";
 import Profile from "./components/profile/Profile";
 import NotFound from "./components/not-found/NotFound";
+import Reviews from "./components/reviews/Reviews";
+import Review from "./components/review/Review";
 
 import "./App.css";
 
@@ -58,6 +60,7 @@ class App extends Component {
               <Route exact path="/login" component={Login} />
               <Route exact path="/profiles" component={Profiles} />
               <Route exact path="/profile/:handle" component={Profile} />
+              <PrivateRoute exact path="/reviews" component={Reviews} />
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
               </Switch>
@@ -67,6 +70,12 @@ class App extends Component {
                   path="/create-profile"
                   component={CreateProfile}
                 />
+              </Switch>
+              <Switch>
+                <PrivateRoute exact path="/feed" component={Reviews} />
+              </Switch>
+              <Switch>
+                <PrivateRoute exact path="/review/:id" component={Review} />
               </Switch>
               <Switch>
                 <PrivateRoute

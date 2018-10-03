@@ -17,7 +17,7 @@ const ReviewSchema = new Schema({
   name: {
     type: String
   },
-  stars: { type: Number, min: 0, max: 5, required: true },
+  stars: { type: Number, min: 0, max: 5 },
   avatar: {
     type: String
   },

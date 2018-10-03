@@ -117,7 +117,7 @@ router.post(
           review.save().then(review => res.json(review));
         })
         .catch(err =>
-          res.status(404).json({ reviewnotfound: "No post found" })
+          res.status(404).json({ reviewnotfound: "No review found" })
         );
     });
   }
@@ -148,7 +148,7 @@ router.post(
           review.save().then(review => res.json(review));
         })
         .catch(err =>
-          res.status(404).json({ reviewnotfound: "No post found" })
+          res.status(404).json({ reviewnotfound: "No review found" })
         );
     });
   }
@@ -179,7 +179,7 @@ router.post(
           review.save().then(review => res.json(review));
         })
         .catch(err =>
-          res.status(404).json({ reviewnotfound: "No post found" })
+          res.status(404).json({ reviewnotfound: "No review found" })
         );
     });
   }
