@@ -21,7 +21,7 @@ const ReviewSchema = new Schema({
   avatar: {
     type: String
   },
-  useful: [
+  usefuls: [
     {
       user: {
         type: Schema.Types.ObjectId,
@@ -29,7 +29,7 @@ const ReviewSchema = new Schema({
       }
     }
   ],
-  funny: [
+  funnys: [
     {
       user: {
         type: Schema.Types.ObjectId,
@@ -37,7 +37,7 @@ const ReviewSchema = new Schema({
       }
     }
   ],
-  cool: [
+  cools: [
     {
       user: {
         type: Schema.Types.ObjectId,

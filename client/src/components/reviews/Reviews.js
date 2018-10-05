@@ -27,6 +27,7 @@ class Reviews extends Component {
           <div className="row">
             <div className="col-md-12">
               <ReviewForm />
+              {reviewContent}
             </div>
           </div>
         </div>

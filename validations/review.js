@@ -15,9 +15,9 @@ module.exports = function validateReviewInput(data) {
     errors.text = "Text field is required";
   }
 
-  if (validator.isEmpty(data.stars)) {
+  /*if (validator.isEmpty(data.stars)) {
     errors.text = "Star Rating is required";
-  }
+  }*/
 
   return {
     errors,

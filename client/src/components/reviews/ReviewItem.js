@@ -88,6 +88,7 @@ class ReviewItem extends Component {
                   <span className="badge badge-light">
                     {review.usefuls.length}
                   </span>
+                  Useful
                 </button>
                 <button
                   onClick={this.onFunnyClick.bind(this, review._id)}
@@ -102,6 +103,7 @@ class ReviewItem extends Component {
                   <span className="badge badge-light">
                     {review.funnys.length}
                   </span>
+                  Funny
                 </button>
                 <button
                   onClick={this.onCoolClick.bind(this, review._id)}
@@ -116,6 +118,7 @@ class ReviewItem extends Component {
                   <span className="badge badge-light">
                     {review.cools.length}
                   </span>
+                  Cool
                 </button>
                 {review.user === auth.user.id ? (
                   <button
